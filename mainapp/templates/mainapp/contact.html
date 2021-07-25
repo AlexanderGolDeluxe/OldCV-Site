@@ -1,0 +1,62 @@
+{% extends "mainapp/wrapper.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<section id="contact" class="contact">
+	{% if error %}
+		<div class="neon-message">
+			<span class="txt-message">{{ error }}</span>
+			<span class="gradient"></span>
+			<span class="dodge"></span>
+		</div>
+	{% else %}
+		<div class="contact-info-block">
+			<h2 class="main-section-caption">Contact me</h2>
+				<p class="main-text">
+					Now that you know a lot about me,
+					please let me know in any convenient way or leave your contacts if you are interested to work with me.
+				</p>
+				<h3 class="main-item-title">My phone number:<a href="tel:+380961110175">+38 (096) 111-01-75</a></h3>
+				<h3 class="main-item-title">Email me to:<a href="mailto:sanya.gol.x@gmail.com">sanya.gol.x@gmail.com</a></h3>
+				<ul class="socials-list">
+					<li class="socials-item">
+						<a href="https://t.me/SanyaGTR">
+							<img src="{% static 'mainapp/img/telegram.png' %}" alt="Telegram">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="skype:sanya.gol.x?chat">
+							<img src="{% static 'mainapp/img/skype.svg' %}" alt="Skype">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="https://www.facebook.com/sanya.gol.x">
+							<img src="{% static 'mainapp/img/facebook.svg' %}" alt="Facebook">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="https://www.linkedin.com/in/alexander-holubtsov">
+							<img src="{% static 'mainapp/img/linkedin.svg' %}" alt="LinkedIn">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="viber://chat?number=+380961110175">
+							<img src="{% static 'mainapp/img/viber.png' %}" alt="Viber">
+						</a>
+					</li>
+				</ul>
+		</div>
+		<form class="contact-form" method="POST">
+			{% csrf_token %}
+				<label class="main-item-text" for="name-name">Name</label>
+				<!-- <input id="name-name" type="text" name="name_user" required> -->{{ form.name_user }}
+				<label class="main-item-text" for="email-email">Email</label>
+				<!-- <input id="email-email" type="email" name="email_user" required> -->{{ form.email_user }}
+				<label class="main-item-text" for="message-message">Message</label>
+				<!-- <textarea id="message-message" name="message"></textarea> -->{{ form.message }}
+				<button class="button" type="submit">LET’S GET STARTED</button>
+		</form>
+	{% endif %}
+</section>
+{% endblock %}

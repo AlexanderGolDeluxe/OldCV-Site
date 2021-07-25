@@ -1,0 +1,55 @@
+{% extends "mainapp/wrapper_ru.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<section id="projects" class="projects">
+  <div class="projects-block-left">
+    <div class="projects-block-left-info">
+			<h2 class="main-section-caps">Мои проекты</h2>
+			<h3 class="main-section-caption">Работы, которые я реализовал за последний год</h3>
+		</div>
+		<ul class="projects-list">
+			<li class="projects-item">
+				<a class="projects-item-link" href="{% static 'mainapp/gllacy/index.html' %}">
+					<img src="{% static 'mainapp/img/gllacy.jpg' %}" alt="Мой проект Глэйси">
+				</a>
+				<h4 class="main-item-title">Магазин Глэйси</h4>
+				<p class="main-item-text">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес.</p>
+			</li>
+			<li class="projects-item">
+				<a class="projects-item-link" href="{% static 'mainapp/device/index.html' %}">
+					<img src="{% static 'mainapp/img/device.jpg' %}" alt="Мой проект Девайс">
+				</a>
+				<h4 class="main-item-title">Девайс</h4>
+				<p class="main-item-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+			</li>
+		</ul>
+	</div>
+	<div class="projects-block-right">					
+		<ul class="projects-list">
+			<li class="projects-item">
+				<a class="projects-item-link" href="{% static 'mainapp/sedona/index.html' %}">
+					<img src="{% static 'mainapp/img/sedona.jpg' %}" alt="Мой проект Седона">
+				</a>
+				<h4 class="main-item-title">Седона</h4>
+				<p class="main-item-text">Седона — небольшой городок в аризоне, заслуживающий большего!</p>
+			</li>
+			<li class="projects-item">
+				<a class="projects-item-link" href="{% static 'mainapp/nerds/index.html' %}">
+					<img src="{% static 'mainapp/img/nerds.jpg' %}" alt="Мой проект Нёрдс">
+				</a>
+				<h4 class="main-item-title">Нёрдс</h4>
+				<p class="main-item-text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+			</li>
+      <li class="projects-item">
+        <a class="projects-item-link" href="{% static 'mainapp/technomart/index.html' %}">
+          <img src="{% static 'mainapp/img/technomart.jpg' %}" alt="Мой проект Техномарт">
+        </a>
+        <h4 class="main-item-title">Техномарт</h4>
+        <p class="main-item-text">Интернет-магазин строительных материалов и инструментов для ремонта.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

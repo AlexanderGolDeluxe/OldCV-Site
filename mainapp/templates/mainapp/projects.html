@@ -1,0 +1,55 @@
+{% extends "mainapp/wrapper.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<section id="projects" class="projects">
+  <div class="projects-block-left">
+    <div class="projects-block-left-info">
+      <h2 class="main-section-caps">MY PROJECTS</h2>
+      <h3 class="main-section-caption">Work that I’ve done for the past year</h3>
+    </div>
+    <ul class="projects-list">
+      <li class="projects-item">
+        <a class="projects-item-link" href="{% static 'mainapp/gllacy/index.html' %}">
+          <img src="{% static 'mainapp/img/gllacy.jpg' %}" alt="My project Gllacy">
+        </a>
+        <h4 class="main-item-title">Gllacy Shop</h4>
+        <p class="main-item-text">Glacy Shop is an online and offline store selling ice cream of its own production by weight.</p>
+      </li>
+      <li class="projects-item">
+        <a class="projects-item-link" href="{% static 'mainapp/device/index.html' %}">
+          <img src="{% static 'mainapp/img/device.jpg' %}" alt="My project Device">
+        </a>
+        <h4 class="main-item-title">Device</h4>
+        <p class="main-item-text">A huge selection of gadgets will not leave indifferent the geek that is in each of us.</p>
+      </li>
+    </ul>
+  </div>
+  <div class="projects-block-right">					
+    <ul class="projects-list">
+      <li class="projects-item">
+        <a class="projects-item-link" href="{% static 'mainapp/sedona/index.html' %}">
+          <img src="{% static 'mainapp/img/sedona.jpg' %}" alt="My project Sedona">
+        </a>
+        <h4 class="main-item-title">Welcome to the gorgeous Sedona</h4>
+        <p class="main-item-text">Sedona is a small town in Arizona, which deserves more!</p>
+      </li>
+      <li class="projects-item">
+        <a class="projects-item-link" href="{% static 'mainapp/nerds/index.html' %}">
+          <img src="{% static 'mainapp/img/nerds.jpg' %}" alt="My project Nerds">
+        </a>
+        <h4 class="main-item-title">Nerds</h4>
+        <p class="main-item-text">Mathematically accurate design for your website or mobile application.</p>
+      </li>
+      <li class="projects-item">
+        <a class="projects-item-link" href="{% static 'mainapp/technomart/index.html' %}">
+          <img src="{% static 'mainapp/img/technomart.jpg' %}" alt="My project Technomart">
+        </a>
+        <h4 class="main-item-title">Technomart</h4>
+        <p class="main-item-text">Online store of building materials and repair tools.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

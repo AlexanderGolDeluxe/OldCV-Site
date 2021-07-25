@@ -1,0 +1,89 @@
+{% load static %}
+<!Doctype HTML>
+<html class="page" lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{% block title %}{% endblock %}</title>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="{% static 'mainapp/favicon.ico' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'mainapp/css/normalize.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'mainapp/css/style.css' %}" type="text/css">
+</head>
+<body class="page-body">
+	<header class="main-header">
+		<nav class="main-navigation">
+			<a class="main-header-logo" href="{% url 'main_page_ru' %}">
+				<img src="{% static 'mainapp/img/codename-alex-logo.jpg' %}" alt="Логотип Александр Голубцов">
+			</a>
+			<ul class="site-navigation">
+				<li class="main-item-text"><a class="site-navigation-link" href="#experience">Опыт</a></li>
+				<li class="main-item-text"><a class="site-navigation-link" href="{% url 'projects_ru' %}">Проекты</a></li>
+				<li class="main-item-text"><a class="site-navigation-link" href="#values">Ценности</a></li>
+				<li class="main-item-text"><a class="site-navigation-link" href="{% url 'contact_ru' %}">Связаться</a></li>
+				<a class="site-navigation-language-swap" href="{% url 'main_page' %}">
+					<svg height="48px" viewBox="0 0 24 24" width="48px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/>
+						<path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93
+						6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91
+						3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14
+						1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66
+						2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43
+						1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16
+						2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36
+						14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+					</svg>
+					<p>Eng</p>
+				</a>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		{% block content %}
+		{% endblock %}
+	</main>
+	<footer class="main-footer">
+		<div class="main-footer-block">
+			<section class="footer-socials">
+				<a href="{% url 'main_page_ru' %}">
+					<img src="{% static 'mainapp/img/codename-alex-logo.jpg' %}" alt="Логотип Александр Голубцов">
+				</a>
+				<ul class="socials-list">
+					<li class="socials-item">
+						<a href="mailto:sanya.gol.x@gmail.com?subject=Обращение%20c%20сайта-резюме&body=Имя:%0AНомер%20для%20связи:">
+							<img src="{% static 'mainapp/img/gmail.png' %}" alt="Gmail">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="https://t.me/SanyaGTR">
+							<img src="{% static 'mainapp/img/telegram.png' %}" alt="Telegram">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="https://github.com/AlexanderGolDeluxe">
+							<img src="{% static 'mainapp/img/github.svg' %}" alt="GitHub">
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="footer-nav">
+				<ul class="footer-nav-list">
+					<li class="footer-nav-item"><a href="{% url 'main_page_ru' %}">Главная страница</a></li>
+					<li class="footer-nav-item"><a href="#experience">Опыт работы</a></li>
+					<li class="footer-nav-item"><a href="#skillset">Навыки и умения</a></li>
+					<li class="footer-nav-item"><a href="#projects">Проекты</a></li>
+				</ul>
+				<ul class="footer-nav-list">
+					<li class="footer-nav-item"><a href="#education">Образование</a></li>
+					<li class="footer-nav-item"><a href="#values">Ценности</a></li>
+					<li class="footer-nav-item"><a href="#qualities">Личные качества</a></li>
+				</ul>
+			</section>
+		</div>
+		<p class="footer-copyright">&copy; All rights reserved 2021 • Александр Голубцов</p>
+	</footer>
+</body>
+</html>

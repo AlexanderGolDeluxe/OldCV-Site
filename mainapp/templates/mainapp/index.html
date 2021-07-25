@@ -1,0 +1,262 @@
+{% extends "mainapp/wrapper.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{% if error %}
+	<div class="container">
+		<div class="neon-message">
+			<span class="txt-message">{{ error }}</span>
+			<span class="gradient"></span>
+			<span class="dodge"></span>
+		</div>
+	</div>
+{% else %}
+	<section class="hero">
+		<img src="{% static 'mainapp/img/hero-image-1.jpg' %}" alt="Alexander Holubtsov is in the photo">
+		<div class="hero-background-square"></div>
+		<div class="hero-info">
+			<h1 class="hero-caption">Alexander Holubtsov.<br>Junior Python Programmer<br><span>Freelancer.</span></h1>
+		</div>			
+	</section>		
+	<section id="experience" class="experience">
+		<div class="container">
+			<h2 class="main-section-caps">Work Experience</h2>
+			<h3 class="main-section-caption">Companies I have worked for in the past</h3>
+			<ul class="experience-list">
+				<li class="experience-item">
+					<label class="experience-item-number">01</label>
+					<h4 class="main-item-title"><span class="experience-item-company-google">Seogene</span>,<br>Front-end intern</h4>
+					<p class="main-item-text">I helped make corrections to sites in production.</p>
+				</li>
+				<li class="experience-item">
+					<label class="experience-item-number">02</label>
+					<h4 class="main-item-title"><span class="experience-item-company-facebook">British American Tobacco</span>,<br>B2B Salesman</h4>
+					<p class="main-item-text">I've worked a brand consultant for a popular product in the mart.</p>
+				</li>
+				<li class="experience-item">
+					<label class="experience-item-number">03</label>
+					<h4 class="main-item-title"><span class="experience-item-company-dribbble">Freelance</span>,<br>Back-end</h4>
+					<p class="main-item-text">I used a WordPress to manage content of the sites.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="skillset" class="skillset">
+		<div class="container">
+			<ul class="skillset-list">
+				<h2 class="main-section-caption">Skillset</h2>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/Python.svg' %}" alt="Logo Python">
+					<h3 class="main-item-title">Python</h3>
+				</li>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/teg.svg' %}" alt="Logo teg">
+					<h3 class="main-item-title">HTML/CSS/JS</h3>
+				</li>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/django.svg' %}" alt="Logo Django">
+					<h3 class="main-item-title">Django</h3>
+				</li>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/oop.svg' %}"  alt="Logo OOP">
+					<h3 class="main-item-title">OOP</h3>
+				</li>
+			</ul>
+			<div class="skillset-info-block">
+				<img src="{% static 'mainapp/img/codewars.png' %}" alt="Codewars logo">
+				<a class="skillset-info-link" href="https://www.codewars.com/users/AlexDeluxe">
+					<img src="https://www.codewars.com/users/AlexDeluxe/badges/large" alt="Codewars Rank">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="languages">
+		<ul class="languages-list">
+			<li class="languages-item">
+				<h2 class="main-section-caption">Languages:</h2>
+			</li>
+			<li class="languages-item">
+				<img src="{% static 'mainapp/img/eng.svg' %}" alt="English">
+				<p class="main-section-caps">— Pre-intermediate</p>
+			</li>
+			<li class="languages-item">
+				<img src="{% static 'mainapp/img/ru.svg' %}" alt="Russian">
+				<p class="main-section-caps">— Native</p>
+			</li>
+			<li class="languages-item">
+				<img src="{% static 'mainapp/img/ua.svg' %}" alt="Ukrainian">
+				<p class="main-section-caps">— Native</p>
+			</li>
+		</ul>
+	</section>
+	<section id="projects" class="projects">
+		<div class="projects-block-left">
+			<div class="projects-block-left-info">
+				<h2 class="main-section-caps">MY PROJECTS</h2>
+				<h3 class="main-section-caption">Work that I’ve done for the past year</h3>
+			</div>
+			<ul class="projects-list">
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/gllacy/index.html' %}">
+						<img src="{% static 'mainapp/img/gllacy.jpg' %}" alt="My project Gllacy">
+					</a>
+					<h4 class="main-item-title">Gllacy Shop</h4>
+					<p class="main-item-text">Glacy Shop is an online and offline store selling ice cream of its own production by weight.</p>
+				</li>
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/device/index.html' %}">
+						<img src="{% static 'mainapp/img/device.jpg' %}" alt="My project Device">
+					</a>
+					<h4 class="main-item-title">Device</h4>
+					<p class="main-item-text">A huge selection of gadgets will not leave indifferent the geek that is in each of us.</p>
+				</li>
+			</ul>
+		</div>
+		<div class="projects-block-right">					
+			<ul class="projects-list">
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/sedona/index.html' %}">
+						<img src="{% static 'mainapp/img/sedona.jpg' %}" alt="My project Sedona">
+					</a>
+					<h4 class="main-item-title">Welcome to the gorgeous Sedona</h4>
+					<p class="main-item-text">Sedona is a small town in Arizona, which deserves more!</p>
+				</li>
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/nerds/index.html' %}">
+						<img src="{% static 'mainapp/img/nerds.jpg' %}" alt="My project Nerds">
+					</a>
+					<h4 class="main-item-title">Nerds</h4>
+					<p class="main-item-text">Mathematically accurate design for your website or mobile application.</p>
+				</li>
+			</ul>
+			<a class="button" href="{% url 'projects' %}">VIEW ALL PROJECTS</a>
+		</div>
+	</section>
+	<section id="education" class="education">
+		<div class="container">
+			<div class="education-info-block">
+				<h2 class="main-section-caption invertion">Education</h2>
+				<p class="main-text invertion">
+					I studied at Kyiv National University of Technologies and Design.
+					I received my bachelor's degree in Computer Science.
+					I learned a C/C++ at university for three years, but in my last year I decided to learn Python.
+					Throughout my training, I went through various video courses to improve my programming skills.
+					At the moment, I also continue to develop in the direction of information technology.
+				</p>
+			</div>				
+			<a class="main-info-link invertion" href="https://en.knutd.edu.ua/">More about KNUTD</a>
+		</div>
+		<img class="main-section-image" src="{% static 'mainapp/img/education.jpg' %}" alt="Book + notebook">
+	</section>
+	<section id="values" class="values container">
+		<h2 class="main-section-caps">My Values</h2>
+		<h3 class="main-section-caption">This is what important for me</h3>
+		<div class="values-info">
+			<img class="values-dot-image" src="{% static 'mainapp/img/dotted-line.png' %}" alt="Dotted line">
+			<ul class="values-list">
+				<li class="values-item">
+					<div class="values-item-text-block">
+						<div class="dots"></div>
+						<img class="values-item-text-block-number" src="{% static 'mainapp/img/values-number-1.png' %}" alt="№1">
+						<h4 class="main-item-title">People are more important than processes</h4>
+						<p class="main-text">
+							I work with real people, not positions.
+							Therefore, it is important for me to make the interaction comfortable while developing both myself and those who work with me.
+						</p>
+					</div>
+					<img class="values-item-image" src="{% static 'mainapp/img/values-1.png' %}" alt="Coworking"/>
+				</li>
+				<li class="values-item up-1">
+					<img class="values-item-image" src="{% static 'mainapp/img/values-2.png' %}" alt="№2"/>
+					<div class="values-item-text-block">
+						<div class="dots position-1"></div>
+						<img class="values-item-text-block-number" src="{% static 'mainapp/img/values-number-2.png' %}" alt="Openness like an application">
+						<h4 class="main-item-title">Openness</h4>
+						<p class="main-text">
+							I believe that I know almost nothing about the world around me.
+							This allows me to embrace new experiences and admit my mistakes.
+						</p>
+					</div>
+				</li>
+				<li class="values-item up-2">
+					<div class="values-item-text-block">
+						<div class="dots position-2"></div>
+						<img class="values-item-text-block-number" src="{% static 'mainapp/img/values-number-3.png' %}" alt="№3">
+						<h4 class="main-item-title">Consciousness</h4>
+						<p class="main-text">
+							I know exactly what I am doing and why I am doing it.
+							If I cannot explain why I am doing this, then I stop doing it.
+						</p>
+					</div>
+					<img class="values-item-image" src="{% static 'mainapp/img/values-3.png' %}" alt="Introspection"/>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="qualities" class="qualities">
+		<img class="main-section-image" src="{% static 'mainapp/img/qualities.png' %}" alt="Personal qualities">
+		<div class="container">
+			<div class="qualities-info-block">
+				<h2 class="main-section-caption invertion">Personal Qualities</h2>
+				<p class="main-text invertion">
+					I have been interested in the IT sphere for a very long time,
+					and I am developing in this direction as far as possible.
+					I see this as my main profession, because I like to interact with the computer and
+					achieving the assigned tasks with its help. I hope to gain useful experience in cooperation,
+					to move forward my skills, as well as to work productively in the interests of the company.
+				</p>
+			</div>				
+			<a class="main-info-link invertion" href="https://github.com/AlexanderGolDeluxe">Follow me on GitHub</a>
+		</div>
+	</section>
+	<section id="contact" class="contact">
+			<div class="contact-info-block">
+				<h2 class="main-section-caption">Contact me</h2>
+				<p class="main-text">
+					Now that you know a lot about me,
+					please let me know in any convenient way or leave your contacts if you are interested to work with me.
+				</p>
+				<h3 class="main-item-title">My phone number:<a href="tel:+380961110175">+38 (096) 111-01-75</a></h3>
+				<h3 class="main-item-title">Email me to:<a href="mailto:sanya.gol.x@gmail.com">sanya.gol.x@gmail.com</a></h3>
+				<ul class="socials-list">
+					<li class="socials-item">
+						<a href="https://t.me/SanyaGTR">
+							<img src="{% static 'mainapp/img/telegram.png' %}" alt="Telegram">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="skype:sanya.gol.x?chat">
+							<img src="{% static 'mainapp/img/skype.svg' %}" alt="Skype">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="https://www.facebook.com/sanya.gol.x">
+							<img src="{% static 'mainapp/img/facebook.svg' %}" alt="Facebook">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="https://www.linkedin.com/in/alexander-holubtsov">
+							<img src="{% static 'mainapp/img/linkedin.svg' %}" alt="LinkedIn">
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="viber://chat?number=+380961110175">
+							<img src="{% static 'mainapp/img/viber.png' %}" alt="Viber">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<form class="contact-form" method="POST">
+				{% csrf_token %}
+					<label class="main-item-text" for="name-name">Name</label>
+					<!-- <input id="name-name" type="text" name="name_user" required> -->{{ form.name_user }}
+					<label class="main-item-text" for="email-email">Email</label>
+					<!-- <input id="email-email" type="email" name="email_user" required> -->{{ form.email_user }}
+					<label class="main-item-text" for="message-message">Message</label>
+					<!-- <textarea id="message-message" name="message"></textarea> -->{{ form.message }}
+					<button class="button" type="submit">LET’S GET STARTED</button>
+			</form>
+	</section>
+{% endif %}
+{% endblock %}

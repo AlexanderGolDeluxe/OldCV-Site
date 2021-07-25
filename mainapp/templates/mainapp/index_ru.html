@@ -1,0 +1,260 @@
+{% extends "mainapp/wrapper_ru.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{% if error %}
+	<div class="container">
+		<div class="neon-message">
+			<span class="txt-message-ru">{{ error }}</span>
+			<span class="gradient"></span>
+			<span class="dodge"></span>
+		</div>
+	</div>
+{% else %}
+	<section class="hero">
+		<img src="{% static 'mainapp/img/hero-image-1.jpg' %}" alt="Александр Голубцов на фотографии">
+		<div class="hero-background-square"></div>
+		<div class="hero-info">
+			<h1 class="hero-caption">Александр Голубцов.<br>Junior Python программист<br><span>Фрилансер.</span></h1>
+		</div>			
+	</section>		
+	<section id="experience" class="experience">
+		<div class="container">
+			<h2 class="main-section-caps">Опыт работы</h2>
+			<h3 class="main-section-caption">Компании, в которых я раньше работал</h3>
+			<ul class="experience-list">
+				<li class="experience-item">
+					<label class="experience-item-number">01</label>
+					<h4 class="main-item-title"><span class="experience-item-company-google">Seogene</span>,<br>Стажировался на Front-end</h4>
+					<p class="main-item-text">Я вносил изменения согласно ТЗ на сайтах вышедших в продакшн.</p>
+				</li>
+				<li class="experience-item">
+					<label class="experience-item-number">02</label>
+					<h4 class="main-item-title"><span class="experience-item-company-facebook">British American Tobacco</span>,<br>B2B Продажи</h4>
+					<p class="main-item-text">Я работал бренд-консультантом популярного на рынке девайса.</p>
+				</li>
+				<li class="experience-item">
+					<label class="experience-item-number">03</label>
+					<h4 class="main-item-title"><span class="experience-item-company-dribbble">Фриланс</span>,<br>Back-end</h4>
+					<p class="main-item-text">Я занимался переносом сайтов на WordPress.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="skillset" class="skillset">
+		<div class="container">
+			<ul class="skillset-list">
+				<h2 class="main-section-caption">Навыки и умения</h2>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/Python.svg' %}" alt="Логотип Python">
+					<h3 class="main-item-title">Python</h3>
+				</li>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/teg.svg' %}" alt="Логотип Тег">
+					<h3 class="main-item-title">HTML/CSS/JS</h3>
+				</li>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/django.svg' %}" alt="Логотип Django">
+					<h3 class="main-item-title">Django</h3>
+				</li>
+				<li class="skillset-item">
+					<img src="{% static 'mainapp/img/oop.svg' %}"  alt="Логотип ООП">
+					<h3 class="main-item-title">ООП</h3>
+				</li>
+			</ul>
+			<div class="skillset-info-block">
+				<img src="{% static 'mainapp/img/codewars.png' %}" alt="Логотип Codewars">
+				<a class="skillset-info-link" href="https://www.codewars.com/users/AlexDeluxe">
+					<img src="https://www.codewars.com/users/AlexDeluxe/badges/large" alt="Рейтинг на Codewars">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="languages">
+		<ul class="languages-list">
+			<li class="languages-item">
+				<h2 class="main-section-caption">Языки:</h2>
+			</li>
+			<li class="languages-item">
+				<img src="{% static 'mainapp/img/eng.svg' %}" alt="Английский">
+				<p class="main-section-caps">— Ниже среднего</p>
+			</li>
+			<li class="languages-item">
+				<img src="{% static 'mainapp/img/ru.svg' %}" alt="Русский">
+				<p class="main-section-caps">— Свободно</p>
+			</li>
+			<li class="languages-item">
+				<img src="{% static 'mainapp/img/ua.svg' %}" alt="Украинский">
+				<p class="main-section-caps">— Свободно</p>
+			</li>
+		</ul>
+	</section>
+	<section id="projects" class="projects">
+		<div class="projects-block-left">
+			<div class="projects-block-left-info">
+				<h2 class="main-section-caps">Мои проекты</h2>
+				<h3 class="main-section-caption">Работы, которые я реализовал за последний год</h3>
+			</div>
+			<ul class="projects-list">
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/gllacy/index.html' %}">
+						<img src="{% static 'mainapp/img/gllacy.jpg' %}" alt="Мой проект Глэйси">
+					</a>
+					<h4 class="main-item-title">Магазин Глэйси</h4>
+					<p class="main-item-text">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес.</p>
+				</li>
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/device/index.html' %}">
+						<img src="{% static 'mainapp/img/device.jpg' %}" alt="Мой проект Девайс">
+					</a>
+					<h4 class="main-item-title">Девайс</h4>
+					<p class="main-item-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+				</li>
+			</ul>
+		</div>
+		<div class="projects-block-right">					
+			<ul class="projects-list">
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/sedona/index.html' %}">
+						<img src="{% static 'mainapp/img/sedona.jpg' %}" alt="Мой проект Седона">
+					</a>
+					<h4 class="main-item-title">Седона</h4>
+					<p class="main-item-text">Седона — небольшой городок в аризоне, заслуживающий большего!</p>
+				</li>
+				<li class="projects-item">
+					<a class="projects-item-link" href="{% static 'mainapp/nerds/index.html' %}">
+						<img src="{% static 'mainapp/img/nerds.jpg' %}" alt="Мой проект Нёрдс">
+					</a>
+					<h4 class="main-item-title">Нёрдс</h4>
+					<p class="main-item-text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+				</li>
+			</ul>
+			<a class="button" href="{% url 'projects_ru' %}">Посмотреть все проекты</a>
+		</div>
+	</section>
+	<section id="education" class="education">
+		<div class="container">
+			<div class="education-info-block">
+				<h2 class="main-section-caption invertion">Образование</h2>
+				<p class="main-text invertion">
+					Я учился в Киевском национальном университете технологий и дизайна.
+					Там получил степень бакалавра по специальности &laquoКомпьютерные науки&raquo. На протяжении трёх лет я изучал C/C++,
+					но на последнем курсе решил изучить Python. Начиная с того времени обучения я проходил различные видеокурсы,
+					чтобы улучшить свои навыки программирования.
+					На данный момент я также продолжаю развиваться в направлении информационных технологий.
+				</p>
+			</div>				
+			<a class="main-info-link invertion" href="https://ru.knutd.edu.ua/">Узнать больше про КНУТД</a>
+		</div>
+		<img class="main-section-image" src="{% static 'mainapp/img/education.jpg' %}" alt="Книга + ноутбук">
+	</section>
+	<section id="values" class="values container">
+		<h2 class="main-section-caps">Мои ценности</h2>
+		<h3 class="main-section-caption">Основные тезисы, которые характеризуют мои принципы и отношение к работе</h3>
+		<div class="values-info">
+			<img class="values-dot-image" src="{% static 'mainapp/img/dotted-line.png' %}" alt="Пунктирная линия">
+			<ul class="values-list">
+				<li class="values-item">
+					<div class="values-item-text-block">
+						<div class="dots"></div>
+						<img class="values-item-text-block-number" src="{% static 'mainapp/img/values-number-1.png' %}" alt="№1">
+						<h4 class="main-item-title">Люди важнее процессов</h4>
+						<p class="main-text">
+							Я работаю с живыми людьми, а не должностями.
+							Потому, для меня важно сделать взаимодействие комфортным при этом развивая как себя,
+							так и тех кто работает со мной.
+						</p>
+					</div>
+					<img class="values-item-image" src="{% static 'mainapp/img/values-1.png' %}" alt="Коворкинг"/>
+				</li>
+				<li class="values-item up-1">
+					<img class="values-item-image" src="{% static 'mainapp/img/values-2.png' %}" alt="№2"/>
+					<div class="values-item-text-block">
+						<div class="dots position-1"></div>
+						<img class="values-item-text-block-number" src="{% static 'mainapp/img/values-number-2.png' %}" alt="Открытость продемострированная на примере приложения">
+						<h4 class="main-item-title">Открытость</h4>
+						<p class="main-text">
+							Я верю в то, что почти ничего не знаю о мире вокруг.
+							Это позволяет принимать новый опыт и признавать свои ошибки.
+						</p>
+					</div>
+				</li>
+				<li class="values-item up-2">
+					<div class="values-item-text-block">
+						<div class="dots position-2"></div>
+						<img class="values-item-text-block-number" src="{% static 'mainapp/img/values-number-3.png' %}" alt="№3">
+						<h4 class="main-item-title">Осознанность</h4>
+						<p class="main-text">
+							Я точно знаю что я делаю и зачем это делаю.
+							Если я не могу объяснить зачем я это делаю, то однозначно прекращаю этим заниматься.
+						</p>
+					</div>
+					<img class="values-item-image" src="{% static 'mainapp/img/values-3.png' %}" alt="Самоанализ"/>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="qualities" class="qualities">
+		<img class="main-section-image" src="{% static 'mainapp/img/qualities-ru.png' %}" alt="Личные качества">
+		<div class="container">
+			<div class="qualities-info-block">
+				<h2 class="main-section-caption invertion">Личные качества</h2>
+				<p class="main-text invertion">
+					Меня уже очень давно интересует сфера IT, и я по возможности развиваюсь в этом направлении.
+					Вижу в этом свою основную профессию, так как мне нравится взаимодействовать с компьютером,
+					достигая с его помощью поставленных задач. Надеюсь получить полезный опыт в сотрудничестве,
+					двигать вперёд свои умения, а также продуктивно работать в интересах компании.
+				</p>
+			</div>				
+			<a class="main-info-link invertion" href="https://github.com/AlexanderGolDeluxe">Я на GitHub</a>
+		</div>
+	</section>
+	<section id="contact" class="contact">
+		<div class="contact-info-block">
+			<h2 class="main-section-caption">Свяжитесь со мной</h2>
+			<p class="main-text">Если Вы бы хотели пообщаться по поводу работы, свяжитесь со мной любым удобным способом или оставьте свои контакты.</p>
+			<h3 class="main-item-title">Мой номер:<a href="tel:+380961110175">+38 (096) 111-01-75</a></h3>
+			<h3 class="main-item-title">Почта:<a href="mailto:sanya.gol.x@gmail.com">sanya.gol.x@gmail.com</a></h3>
+			<ul class="socials-list">
+				<li class="socials-item">
+					<a href="https://t.me/SanyaGTR">
+						<img src="{% static 'mainapp/img/telegram.png' %}" alt="Telegram">
+					</a>
+				</li>
+				<li class="socials-item">
+					<a href="skype:sanya.gol.x?chat">
+						<img src="{% static 'mainapp/img/skype.svg' %}" alt="Skype">
+					</a>
+				</li>
+				<li class="socials-item">
+					<a href="https://www.facebook.com/sanya.gol.x">
+						<img src="{% static 'mainapp/img/facebook.svg' %}" alt="Facebook">
+					</a>
+				</li>
+				<li class="socials-item">
+					<a href="https://www.linkedin.com/in/alexander-holubtsov">
+						<img src="{% static 'mainapp/img/linkedin.svg' %}" alt="LinkedIn">
+					</a>
+				</li>
+				<li class="socials-item">
+					<a href="viber://chat?number=+380961110175">
+						<img src="{% static 'mainapp/img/viber.png' %}" alt="Viber">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<form class="contact-form" method="POST">
+			{% csrf_token %}
+			<label class="main-item-text" for="name-name">Имя</label>
+			<!-- <input id="name-name" type="text" name="name_user" required> -->{{ form.name_user }}
+			<label class="main-item-text" for="email-email">Электронная почта</label>
+			<!-- <input id="email-email" type="email" name="email_user" required> -->{{ form.email_user }}
+			<label class="main-item-text" for="message-message">Сообщение</label>
+			<!-- <textarea id="message-message" name="message"></textarea> -->{{ form.message }}
+			<span>{{ error }}</span>
+			<button class="button" type="submit">Хочу работать вместе!</button>
+		</form>
+	</section>
+{% endif %}
+{% endblock %}
